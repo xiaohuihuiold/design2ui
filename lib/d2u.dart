@@ -30,7 +30,7 @@ class D2U {
     if (dp != null) {
       return dp / designWidth * screenWidth;
     } else if (px != null) {
-      return px * designPixelRatio / designWidth * screenWidth;
+      return px / designPixelRatio / designWidth * screenWidth;
     }
     return 0.0;
   }

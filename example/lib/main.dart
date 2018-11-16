@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     D2U.init(context);
-    D2U.load(D2UDesign.fromCompare(540.0, 1080));
+    D2U.load(D2UDesign(2.0, 540.0));
     return Scaffold(
       appBar: AppBar(
         title: Text('Demo'),
@@ -45,13 +45,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              width: D2U.d2u(dp: 378.0),
-              height: D2U.d2u(dp: 378.0),
+              width: D2U.d2u(px: 378*2),
+              height: D2U.d2u(px: 378*2),
               color: Colors.blue,
               child: Center(
                 child: Text(
-                  'width:${D2U.d2u(dp: 378.0).floor()}dp\n'
-                      'height:${D2U.d2u(dp: 378.0).floor()}dp\n'
+                  'width:${D2U.d2u(px: 378*2).floor()}dp\n'
+                      'height:${D2U.d2u(px: 378*2).floor()}dp\n'
                       'density:${D2U.defaultDensity * D2U.pixelRatio}\n'
                       'screen width:${D2U.screenWidth * D2U.pixelRatio}px\n'
                       'screen height:${D2U.screenHeight * D2U.pixelRatio}px',
