@@ -20,22 +20,23 @@ UI适配插件,使界面和字体在ppi不同的手机上显示效果和设计�
    ```
 
 * 加载设计图设置
-   * 知道设计图的像素比情况,假设设计图宽度是1080px/540dp
+   * 知道设计图的像素比和宽度,假设设计图宽度是1080px/540dp
      ```dart
-     D2U.load(D2UDesign(2.0));
+     D2U.load(D2UDesign(2.0,540.0));
      ```
-   * 知道设计图ppi的情况,假设设计图ppi是320
+   * 知道设计图ppi和宽度,假设设计图ppi是320,宽度540dp,也可以是px
      ```dart
-     D2U.load(D2UDesign.fromDensity(320));
+     D2U.load(D2UDesign.fromDensity(320,widthDp:540.0));
+     D2U.load(D2UDesign.fromDensity(320,widthPx:1080));
      ```
    * 知道设计图dp和px的情况,假设设计图某个图标宽度540dp/1080px
      ```dart
      D2U.load(D2UDesign.fromCompare(540.0,1080));
      ```
-   * 只知道设计图px的情况(不准确)
+   * 只知道设计图宽度dp或者px
      ```dart
+     D2U.load(D2UDesign.fromSize(widthDp:540.0));
      D2U.load(D2UDesign.fromSize(widthPx:1080));
-     D2U.load(D2UDesign.fromSize(heightPx:1920));
      ```
 
 * 使用
@@ -59,5 +60,7 @@ UI适配插件,使界面和字体在ppi不同的手机上显示效果和设计�
      )
      ```
 
-## 使用效果:
+## 使用效果 [`example`](example/lib/main.dart):
+![](images/screen01.png)![](images/screen02.png)
 
+![](images/screen03.png)![](images/screen04.png)

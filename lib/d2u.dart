@@ -5,8 +5,8 @@ class D2U {
   static int defaultDensity = 160;
 
   static double designPixelRatio;
+  static double designWidth;
 
-  static double ratio;
   static double pixelRatio;
   static double textScale;
   static double screenWidth;
@@ -23,14 +23,14 @@ class D2U {
 
   static load(D2UDesign design) {
     designPixelRatio = design.ratio;
-    ratio = pixelRatio / designPixelRatio;
+    designWidth = design.width;
   }
 
   static double d2u({double dp, int px}) {
     if (dp != null) {
-      return dp / ratio;
+      return dp / designWidth * screenWidth;
     } else if (px != null) {
-      return px / ratio / pixelRatio;
+      return px * designPixelRatio / designWidth * screenWidth;
     }
     return 0.0;
   }

@@ -25,34 +25,38 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     D2U.init(context);
-    D2U.load(D2UDesign.fromSize(widthPx: 1080));
+    D2U.load(D2UDesign.fromCompare(540.0, 1080));
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dmo'),
+        title: Text('Demo'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
             Container(
-              width: 300.0,
-              height: 300.0,
+              width: 378.0,
+              height: 378.0,
               color: Colors.red,
               child: Center(
                 child: Text(
-                  'width:300.0dp\nheight:300.0dp',
+                  'width:378.0dp\nheight:378.0dp',
                   style: TextStyle(fontSize: 24.0),
                 ),
               ),
             ),
             Container(
-              width: D2U.d2u(dp: 300.0),
-              height: D2U.d2u(dp: 300.0),
+              width: D2U.d2u(dp: 378.0),
+              height: D2U.d2u(dp: 378.0),
               color: Colors.blue,
               child: Center(
                 child: Text(
-                  'width:${D2U.d2u(dp: 300.0).floor()}dp\nheight:${D2U.d2u(dp: 300.0).floor()}dp',
+                  'width:${D2U.d2u(dp: 378.0).floor()}dp\n'
+                      'height:${D2U.d2u(dp: 378.0).floor()}dp\n'
+                      'density:${D2U.defaultDensity * D2U.pixelRatio}\n'
+                      'screen width:${D2U.screenWidth * D2U.pixelRatio}px\n'
+                      'screen height:${D2U.screenHeight * D2U.pixelRatio}px',
                   style: TextStyle(
-                    fontSize: D2U.d2ut(24.0),
+                    fontSize: D2U.d2ut(18.0),
                   ),
                 ),
               ),
