@@ -33,14 +33,14 @@ UI适配插件,使界面和字体在ppi不同的手机上显示效果和设计�
      ```dart
      D2U.load(D2UDesign.fromCompare(540.0,1080));
      ```
-   * 只知道设计图宽度dp或者px
+   * 只知道设计图宽度dp或者px(填写的是px时,使用填写px和dp效果是一样的)
      ```dart
      D2U.load(D2UDesign.fromSize(widthDp:540.0));
      D2U.load(D2UDesign.fromSize(widthPx:1080));
      ```
 
 * 使用
-   * 设置宽高时直接使用D2U.d2u(dp:dp,px:px);(px暂时不准确)
+   * 设置宽高时直接使用D2U.d2u(dp:dp,px:px);
      ```dart
      Container(
        width: D2U.d2u(dp: 100.0),
