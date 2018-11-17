@@ -1,6 +1,6 @@
 name: design2ui
-description: UI adaptation design
-version: 0.0.1
+description: UI adaptation plugin, so that the interface and font display the same effect on the different ppi phones
+version: 0.1.1
 author: xiaohuihuiold <xiaohuihuiold@gmail.com>
 homepage: https://github.com/xiaohuihuiold/design2ui
 
